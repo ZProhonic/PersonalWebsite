@@ -1,0 +1,81 @@
+/* Portfolio Description */
+.portfolio-description {
+    text-align: center;
+    padding: 20px 0; /* Add padding for spacing */
+}
+
+.portfolio-description h2 {
+    font-size: 2.5em; /* Larger font size for "Portfolio" heading */
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px; /* Space below heading */
+}
+
+.portfolio-intro {
+    font-size: 1.2em; /* Slightly larger text for the introductory paragraph */
+    line-height: 1.6; /* Better line spacing for readability */
+    color: #555; /* Softer text color */
+    max-width: 800px; /* Limit width for better readability */
+    margin: 0 auto 20px auto; /* Center align and add bottom margin */
+}
+
+/* Carousel Container */
+.carousel-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Space out controls */
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden; /* Hide overflow to create the carousel effect */
+    padding: 0 60px; /* Add padding to make space for arrows */
+}
+
+/* Carousel Wrapper */
+.carousel-wrapper {
+    width: 100%;
+    overflow: hidden; /* Hide anything outside the container */
+}
+
+/* Carousel Items Wrapper */
+.project-portfolio-carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Smooth transition */
+    width: calc(100% * 3); /* Width for all items */
+    max-width: 100%; /* Ensure max width doesn't exceed parent container */
+}
+
+/* Individual Portfolio Item */
+.portfolio {
+    flex: 0 0 30%; /* Adjusted for 3 items per row */
+    max-width: 30%;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.portfolio img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    padding: 2px;
+    border-radius: 8px;
+}
+
+/* GitHub Link Below Carousel */
+.github-link {
+    text-align: center;
+    margin-top: 20px; /* Add some space above */
+    font-size: 1.2em; /* Slightly larger text */
+}
+
+.github-link a {
+    color: #0073b1; /* GitHub blue link color */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.github-link a:hover {
+    text-decoration: underline;
+}

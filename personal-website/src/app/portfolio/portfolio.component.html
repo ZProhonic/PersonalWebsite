@@ -1,0 +1,114 @@
+<body>
+    <header>
+        <div class="header-container">
+            <div class="title">
+                <p>ZpDevelopments</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a [routerLink]="['/home']">Home</a></li>
+                    <li><a [routerLink]="['/about']">About Me</a></li>
+                    <li><a [routerLink]="['/portfolio']">Portfolio</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="portfolio-description">
+            <section>
+                <h2>Portfolio</h2>
+                <p class="portfolio-intro">Here is a selection of my favorite projects that showcase my journey and
+                    growth as a developer over the past seven months. From simple console applications to complex,
+                    full-stack web solutions, each project demonstrates my skills in software development and
+                    collaboration.</p>
+            </section>
+        </div>
+
+        <!-- Carousel Container -->
+        <div class="carousel-container">
+            <!-- Carousel Controls -->
+            <button class="carousel-control left" id="prevBtn">&#10094;</button>
+            <div class="carousel-wrapper">
+                <div class="project-portfolio-carousel">
+                    <!-- Portfolio Items -->
+                    <div class="portfolio">
+                        <h3>Coin Flip Game</h3>
+                        <br>
+                        <a href="https://github.com/ZProhonic/Deliverable2/blob/main/Deliverable2/Program.cs"
+                            target="_blank">Git Hub</a>
+                        <br>
+                        <p>During my course pre-work, I was instructed to create a coin flip game using C#. This
+                            application
+                            asks the user to select heads or tails and tells them if their guess matches the random flip
+                            of
+                            the coin. There are 5 rounds with the application stating who won.</p>
+                    </div>
+
+                    <div class="portfolio">
+                        <h3>Movie Database</h3>
+                        <br>
+                        <a href="https://github.com/ZProhonic/Movie-Database-Lab/blob/main/Movie%20Database%20Lab/Program.cs"
+                            target="_blank">Git Hub</a>
+                        <br>
+                        <p>This application allows the user to see a list of available movies from a database, sorted by
+                            genre, and displays the available titles.</p>
+                    </div>
+
+                    <div class="portfolio">
+                        <h3>Rock, Paper, Scissors</h3>
+                        <br>
+                        <a href="https://github.com/ZProhonic/Roshambo-Lab/blob/main/Roshambo%20Lab/Roshambo%20Lab/Program.cs"
+                            target="_blank">Git Hub</a>
+                        <br>
+                        <p>Rock, paper, scissors is a game in which the user can play against multiple opponents of
+                            their selection. Each round, the application will let the user know if they won and give
+                            them a
+                            few options to proceed.</p>
+                    </div>
+
+                    <!-- Additional Projects -->
+                    <div class="portfolio">
+                        <h3>This Website!</h3>
+                        <br>
+                        <a href="https://github.com/ZProhonic/PersonalWebsite" target="_blank">Git Hub</a>
+                        <br>
+                        <p>I created this website to show you a little about myself both professionally and personally.
+                            I utilized HTML, CSS, and Typescript in Angular to produce what you see on this webpage.</p>
+                    </div>
+
+                    <div class="portfolio">
+                        <h3>AdvisorHub</h3>
+                        <br>
+                        <a href="https://github.com/ZProhonic/AdvisorHub" target="_blank">Git Hub</a>
+                        <br>
+                        <p>Currently in development, I am creating a web application aimed at broker dealers onboarding
+                            teams. The app will allow the user to search for a specific advisor, display all relevant
+                            job
+                            data, and assist in managing pipelines. This application uses SQL Server, MVC with Entity
+                            Framework, Angular, and a created API.</p>
+                    </div>
+
+                    <div class="portfolio">
+                        <h3>TechQuest Jobs</h3>
+                        <br>
+                        <a href="https://github.com/ZProhonic/GC-Final-Project" target="_blank">Git Hub</a>
+                        <br>
+                        <p>Collaborating with 3 other developers, we created a recruiting application that searches for
+                            available jobs and allows the user to mark their application status for each. This
+                            application
+                            uses a SQL Server database for the jobs, MVC with Entity Framework, Angular front end, and
+                            an external TripAdvisor API for the user to search attractions in their local area.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control right" id="nextBtn">&#10095;</button>
+        </div>
+
+        <!-- Additional Paragraph Below Carousel -->
+        <div class="github-link">
+            <p>To explore more of my projects and contributions, visit my <a href="https://github.com/ZProhonic"
+                    target="_blank">GitHub profile</a>. Here, you can find a comprehensive list of all my work and
+                repositories.</p>
+        </div>
+    </main>
+</body>

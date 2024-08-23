@@ -1,0 +1,151 @@
+/* Reset basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header */
+header {
+    background-color: transparent;
+    padding: 20px 40px; /* Add padding for spacing */
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title p {
+    font-size: 2em; /* Make the logo text larger */
+    font-weight: bold;
+    color: #fff; /* White text color */
+    margin: 0;
+}
+
+/* Body */
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    background: linear-gradient(to right, #9c46f1, #6658ff);
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    color: rgb(85, 84, 84);
+}
+
+/* Content Container */
+.content-container {
+    display: flex; /* Use flexbox to align images and content horizontally */
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px; /* Space between the images and the content */
+    max-width: 100%;
+    padding: 20px;
+}
+
+/* Left and Right Images */
+.left-images, .right-images {
+    display: flex;
+    flex-direction: column; /* Stack images vertically */
+    align-items: center; /* Center images horizontally */
+    gap: 60px; /* Space between stacked images */
+    margin-top: 100px;
+}
+
+.left-images img, .right-images img {
+    max-width: 300px; /* Maximum width of images */
+    max-height: 300px; /* Maximum height of images */
+    border-radius: 10px; /* Round the corners of images */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+    object-fit: cover; /* Maintain aspect ratio, fill container */
+    margin-bottom: 10px; /* Add space below each image */
+}
+
+/* About Section */
+.about-section {
+    padding: 40px 20px;
+    background-color: #ffffff;
+    max-width: 600px; /* Set a narrower max width for about section */
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* About Text */
+.about-text {
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+.about-text p {
+    font-size: 1em;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+/* About Section Heading */
+.about-section h1 {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* BioFooter */
+.BioFooter {
+    text-align: center;
+    padding-top: 20px;
+}
+
+/* Contact Info */
+.contact-info {
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    font-size: 1.2em;
+    color: #555;
+}
+
+.contact-item .icon {
+    margin-right: 10px;
+}
+
+.contact-item img {
+    width: 24px;
+    height: 24px;
+}
+
+.contact-item a {
+    text-decoration: none;
+    color: #0073b1;
+    display: flex;
+    align-items: center;
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+}
+
+.contact-text {
+    font-weight: 400;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #f4efef;
+    padding: 5px;
+    text-align: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
