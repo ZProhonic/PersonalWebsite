@@ -1,75 +1,42 @@
-/* Reset basic styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Header */
-header {
-    background-color: transparent;
-    padding: 20px 40px; /* Add padding for spacing */
-}
-
-.header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.title p {
-    font-size: 2em; /* Make the logo text larger */
-    font-weight: bold;
-    color: #fff; /* White text color */
-    margin: 0;
-}
-
-/* Body */
-body {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
-    background: linear-gradient(to right, #9c46f1, #6658ff);
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    color: rgb(85, 84, 84);
-}
-
-/* Content Container */
+/* Content Container for About Component */
 .content-container {
-    display: flex; /* Use flexbox to align images and content horizontally */
+    display: flex;
     justify-content: center;
     align-items: flex-start;
-    gap: 20px; /* Space between the images and the content */
-    max-width: 100%;
+    gap: 20px;
+    max-width: 90%; /* Reduce max-width to prevent overflowing on smaller screens */
     padding: 20px;
+    margin: 80px auto; /* Center the container and adjust margin */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
 }
 
-/* Left and Right Images */
+/* Images in About Component */
 .left-images, .right-images {
     display: flex;
-    flex-direction: column; /* Stack images vertically */
-    align-items: center; /* Center images horizontally */
-    gap: 60px; /* Space between stacked images */
-    margin-top: 100px;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px; /* Reduce gap for smaller screens */
+    margin-top: 60px; /* Adjust margin for a more compact layout */
 }
 
 .left-images img, .right-images img {
-    max-width: 300px; /* Maximum width of images */
-    max-height: 300px; /* Maximum height of images */
-    border-radius: 10px; /* Round the corners of images */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
-    object-fit: cover; /* Maintain aspect ratio, fill container */
-    margin-bottom: 10px; /* Add space below each image */
+    max-width: 100%; /* Ensure images are responsive */
+    max-height: 300px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+    margin-bottom: 10px;
 }
 
 /* About Section */
 .about-section {
     padding: 40px 20px;
     background-color: #ffffff;
-    max-width: 600px; /* Set a narrower max width for about section */
+    max-width: 600px;
+    margin: 0 auto; /* Center the about section */
     border-radius: 15px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Ensure section takes full width on smaller screens */
 }
 
 /* About Text */
@@ -80,7 +47,7 @@ body {
 }
 
 .about-text p {
-    font-size: 1em;
+    font-size: 1.2em; /* Slightly increase font size for readability */
     margin-bottom: 20px;
     text-align: justify;
 }
@@ -90,6 +57,7 @@ body {
     font-size: 2em;
     font-weight: bold;
     margin-bottom: 20px;
+    text-align: center; /* Center heading for better balance on smaller screens */
 }
 
 /* BioFooter */
@@ -105,6 +73,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    align-items: flex-start;
 }
 
 .contact-item {
@@ -138,7 +107,7 @@ body {
     font-weight: 400;
 }
 
-/* Footer */
+/* Footer for About Component */
 footer {
     background-color: #333;
     color: #f4efef;
@@ -148,4 +117,55 @@ footer {
     left: 0;
     bottom: 0;
     width: 100%;
+}
+
+/* Responsive Design for About Component */
+@media (max-width: 768px) {
+    .content-container {
+        flex-direction: column; /* Stack content vertically on smaller screens */
+        align-items: center;
+        gap: 30px;
+    }
+
+    .left-images, .right-images {
+        gap: 30px; /* Reduce gap for smaller screens */
+        margin-top: 40px; /* Adjust top margin */
+    }
+
+    .left-images img, .right-images img {
+        max-width: 70%; /* Adjust image size for medium screens */
+        max-height: 250px; /* Reduce height for smaller screens */
+    }
+
+    .about-section {
+        max-width: 90%; /* Increase the about section width for better usage on smaller screens */
+        padding: 30px 15px; /* Adjust padding for better fit */
+    }
+
+    .about-section h1 {
+        font-size: 1.8em; /* Adjust heading size for medium screens */
+    }
+
+    .about-text p {
+        font-size: 1.1em; /* Adjust font size for better readability */
+    }
+}
+
+@media (max-width: 480px) {
+    .left-images img, .right-images img {
+        max-width: 100%; /* Full width for smaller screens */
+        max-height: 200px; /* Further reduce image height for small screens */
+    }
+
+    .about-section {
+        padding: 20px 10px; /* Further adjust padding for smaller screens */
+    }
+
+    .about-section h1 {
+        font-size: 1.6em; /* Adjust heading size for smaller screens */
+    }
+
+    .about-text p {
+        font-size: 1em; /* Slightly reduce font size for smaller screens */
+    }
 }

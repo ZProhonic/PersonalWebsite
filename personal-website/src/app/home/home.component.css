@@ -1,0 +1,150 @@
+/* Container */
+.container {
+    background-color: white;
+    padding: 20px;
+    margin: 80px auto;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Bio Section */
+.Bio {
+    display: flex;
+    align-items: flex-start; /* Align items to the top */
+    margin: 0 auto;
+    padding: 5px;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+/* Image and Text within Bio */
+.BioImage {
+    flex: 0 0 auto;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.BioImage img {
+    border-radius: 10px;
+    height: auto;
+    width: auto;
+    max-height: 400px; /* Set a max-height to prevent the image from being too large */
+    max-width: 100%;
+    object-fit: cover;
+}
+
+/* Bio Text */
+.BioText {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-left: 20px;
+}
+
+.BioText p:first-of-type,
+.BioText p:nth-of-type(2) {
+    font-size: 1.2em; /* Smaller font size for the first and second paragraphs */
+    margin-bottom: 10px; /* Spacing between the paragraphs */
+}
+
+.BioText h2 {
+    font-size: 2em; /* Larger font size for the name */
+    font-weight: bold;
+    margin: 0 0 15px 0; /* Margin below the name */
+    line-height: 1.2;
+}
+
+.BioText p:nth-of-type(3) {
+    font-size: 1.2em; /* Regular font size for the main bio paragraph */
+    font-family: 'montserrat'; /* Change the font for the bio paragraph */
+    margin-top: 20px; /* Increase spacing above the bio paragraph */
+    margin-bottom: 20px; /* Spacing below the bio paragraph */
+    color: #333; /* Adjust text color if needed */
+}
+
+.BioText > p,
+.BioText > h2 {
+    margin-bottom: 15px; /* Ensure there's spacing between text elements */
+}
+
+/* Contact Info */
+.contact-info {
+    margin-top: 20px; /* Reduced top margin for closer alignment */
+    width: 100%; /* Ensure the contact info takes up the full width available */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start; /* Align the items to the left */
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    font-size: 1.2em;
+    color: #555;
+}
+
+.contact-item .icon {
+    margin-right: 10px;
+}
+
+.contact-item img {
+    width: 24px;
+    height: 24px;
+}
+
+.contact-item a {
+    text-decoration: none;
+    color: #0073b1; /* LinkedIn blue */
+    display: flex;
+    align-items: center;
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+}
+
+.contact-text {
+    font-weight: 400;
+}
+
+/* Responsive Design for Home Component */
+@media (max-width: 768px) {
+    .Bio {
+        flex-direction: column;
+        align-items: center; /* Center items vertically for smaller screens */
+    }
+
+    .BioImage {
+        margin-right: 0;
+        margin-bottom: 20px; /* Add spacing below the image */
+    }
+
+    .BioText {
+        padding-left: 0;
+        text-align: center; /* Center text for smaller screens */
+    }
+
+    .BioImage img {
+        max-width: 70%; /* Ensure image doesn't take too much width on medium screens */
+        max-height: 300px; /* Adjust max-height for medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .BioImage img {
+        max-width: 90%; /* Full width for smaller screens */
+        max-height: 200px; /* Further reduce max-height for smaller screens */
+    }
+
+    .BioText {
+        padding: 5px;
+        font-size: 0.9em; /* Adjust text size for readability */
+        text-align: center; /* Center text for smaller screens */
+    }
+}

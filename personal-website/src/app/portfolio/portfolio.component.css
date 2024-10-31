@@ -1,58 +1,80 @@
 /* Portfolio Description */
 .portfolio-description {
     text-align: center;
-    padding: 20px 0; /* Add padding for spacing */
+    padding: 20px 0;
 }
 
 .portfolio-description h2 {
-    font-size: 2.5em; /* Larger font size for "Portfolio" heading */
+    font-size: 2.5em;
     font-weight: bold;
-    color: #333;
-    margin-bottom: 10px; /* Space below heading */
+    color: #faf6f6;
+    margin-bottom: 10px;
 }
 
 .portfolio-intro {
-    font-size: 1.2em; /* Slightly larger text for the introductory paragraph */
-    line-height: 1.6; /* Better line spacing for readability */
-    color: #555; /* Softer text color */
-    max-width: 800px; /* Limit width for better readability */
-    margin: 0 auto 20px auto; /* Center align and add bottom margin */
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #f6f4f4;
+    max-width: 800px;
+    margin: 0 auto 20px auto;
 }
 
 /* Carousel Container */
 .carousel-container {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Space out controls */
+    justify-content: space-between;
     position: relative;
     width: 100%;
     max-width: 1200px;
     margin: auto;
-    overflow: hidden; /* Hide overflow to create the carousel effect */
-    padding: 0 60px; /* Add padding to make space for arrows */
+    overflow: hidden;
+    padding: 0 60px;
+}
+
+/* Carousel Arrows */
+.carousel-arrow {
+    font-size: 2em;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #333;
+    border: none;
+    border-radius: 50%;
+    width: 80px; /* Reduced width for smaller screens */
+    height: 80px; /* Reduced height for smaller screens */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.carousel-arrow:hover {
+    background-color: rgba(255, 255, 255, 1);
+    transform: scale(1.1);
 }
 
 /* Carousel Wrapper */
 .carousel-wrapper {
     width: 100%;
-    overflow: hidden; /* Hide anything outside the container */
+    overflow: hidden;
 }
 
 /* Carousel Items Wrapper */
 .project-portfolio-carousel {
     display: flex;
-    transition: transform 0.5s ease-in-out; /* Smooth transition */
-    width: calc(100% * 3); /* Width for all items */
-    max-width: 100%; /* Ensure max width doesn't exceed parent container */
+    transition: transform 0.5s ease-in-out;
+    width: calc(100% * 3); /* Adjusted for multiple items */
+    max-width: 100%;
 }
 
 /* Individual Portfolio Item */
 .portfolio {
-    flex: 0 0 30%; /* Adjusted for 3 items per row */
+    flex: 0 0 30%;
     max-width: 30%;
     padding: 10px;
     box-sizing: border-box;
     text-align: center;
+    color: #f4f6f7;
 }
 
 .portfolio img {
@@ -66,16 +88,70 @@
 /* GitHub Link Below Carousel */
 .github-link {
     text-align: center;
-    margin-top: 20px; /* Add some space above */
-    font-size: 1.2em; /* Slightly larger text */
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #f4f6f7;
 }
 
 .github-link a {
-    color: #0073b1; /* GitHub blue link color */
+    color: #f4f6f7;
     text-decoration: none;
     font-weight: bold;
 }
 
 .github-link a:hover {
     text-decoration: underline;
+}
+
+/* Responsive Design for Portfolio Component */
+@media (max-width: 768px) {
+    .carousel-container {
+        padding: 0 20px; /* Adjust padding for medium screens */
+    }
+
+    .portfolio-description h2 {
+        font-size: 2em; /* Adjust heading size */
+    }
+
+    .portfolio-intro {
+        font-size: 1.1em; /* Adjust font size for better readability */
+        max-width: 90%; /* Make the intro text more compact */
+    }
+
+    .carousel-arrow {
+        width: 60px; /* Adjust arrow size for medium screens */
+        height: 60px;
+        font-size: 1.5em; /* Reduce arrow font size */
+    }
+
+    .portfolio {
+        flex: 0 0 45%; /* Adjust flex basis for two items per row */
+        max-width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-container {
+        padding: 0 10px; /* Further reduce padding for small screens */
+    }
+
+    .portfolio-description h2 {
+        font-size: 1.8em; /* Further reduce heading size */
+    }
+
+    .portfolio-intro {
+        font-size: 1em; /* Reduce font size for small screens */
+        max-width: 100%; /* Use full width */
+    }
+
+    .carousel-arrow {
+        width: 50px; /* Further reduce arrow size */
+        height: 50px;
+        font-size: 1.2em; /* Adjust font size */
+    }
+
+    .portfolio {
+        flex: 0 0 100%; /* Stack portfolio items vertically for smaller screens */
+        max-width: 100%;
+    }
 }
